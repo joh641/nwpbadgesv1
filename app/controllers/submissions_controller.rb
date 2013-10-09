@@ -40,6 +40,10 @@ class SubmissionsController < ApplicationController
       @submissions =  @submissions.sort_by &:date
       @date_class = "hilite"
     end
+    if session[:sort] == "status"
+      @submissions = @submissions.sort_by &:status
+      @status_class = "hilite"
+    end
   end
 
   def new
@@ -48,7 +52,7 @@ class SubmissionsController < ApplicationController
   end
 
   def create
-    @submission = Submission.create!(params[:submission])
+    @submission = Submission.create!(params[:submission], :status => "Pending")
     flash[:notice] = "#{@submission.name}'s submission was successfully created."
     redirect_to submissions_path
   end

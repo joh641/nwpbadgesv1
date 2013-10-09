@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-submissions = [{:name => 'Test User', :badge => 'Test Badge 1', :date => '8-Oct-2013', :description => 'Insert Description Here'}]
+submissions = [{:name => 'Test User', :badge => 'Test Badge 1', :status => 'Approved', :date => '8-Oct-2013', :description => 'Insert Description Here'}]
 
 
 
