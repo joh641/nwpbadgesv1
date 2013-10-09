@@ -36,13 +36,17 @@ class SubmissionsController < ApplicationController
       @submissions = @submissions.sort_by &:name
       @name_class = "hilite"
     end
-    if session[:sort] == "date"
-      @submissions =  @submissions.sort_by &:date
-      @date_class = "hilite"
+    if session[:sort] == "badge"
+      @submissions = @submissions.sort_by &:badge
+      @badge_class = "hilite"
     end
     if session[:sort] == "status"
-      @submissions = @submissions.sort_by &:status
+      @submissions =  @submissions.sort_by &:status
       @status_class = "hilite"
+    end
+    if session[:sort] == "date"
+      @submissions = @submissions.sort_by &:date
+      @date_class = "hilite"
     end
   end
 
