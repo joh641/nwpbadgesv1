@@ -12,16 +12,16 @@
     %tr
       %th{:class => @name_class}= link_to "Name", submissions_path(:sort => "name"), id: "name_header"
       %th{:class => @badge_class}= link_to "Badge", submissions_path(:sort => "badge"), id: "badge_header"
-      %th{:class => @status_class}= link_to "Status", submissions_path(:sort => "status"), id: "status_header"
       %th{:class => @date_class}= link_to "Date", submissions_path(:sort => "date"), id: "date_header"
+      %th{:class => @status_class}= link_to "Status", submissions_path(:sort => "status"), id: "status_header"
       %th More Info
   %tbody
     - @submissions.each do |submission|
       %tr
         %td= submission.name 
         %td= submission.badge
-        %td= submission.status
         %td= submission.date.strftime("%B %d, %Y")
+        %td= submission.status
         %td= link_to "More about #{submission.name}'s submission", submission_path(submission)
 
 = link_to 'Add new submission', new_submission_path

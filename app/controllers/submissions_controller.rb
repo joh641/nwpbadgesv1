@@ -56,6 +56,7 @@ class SubmissionsController < ApplicationController
   end
 
   def create
+    params[:submission][:date] = Time.now
     params[:submission][:status] = "Pending"
     @submission = Submission.create!(params[:submission])
     flash[:notice] = "#{@submission.name}'s submission was successfully created."
