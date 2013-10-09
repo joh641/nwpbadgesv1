@@ -56,7 +56,8 @@ class SubmissionsController < ApplicationController
   end
 
   def create
-    @submission = Submission.create!(params[:submission], :status => "Pending")
+    params[:submission][:status] = "Pending"
+    @submission = Submission.create!(params[:submission])
     flash[:notice] = "#{@submission.name}'s submission was successfully created."
     redirect_to submissions_path
   end

@@ -21,7 +21,7 @@
         %td= submission.name 
         %td= submission.badge
         %td= submission.status
-        %td= submission.date
+        %td= submission.date.strftime("%B %d, %Y")
         %td= link_to "More about #{submission.name}'s submission", submission_path(submission)
 
 = link_to 'Add new submission', new_submission_path
