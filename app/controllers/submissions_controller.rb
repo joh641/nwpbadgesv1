@@ -29,7 +29,7 @@ class SubmissionsController < ApplicationController
       redirect_to submissions_path(:sort => session[:sort]) and return
     end
     if session[:badges]
-      @checked = session[:badges]
+      @checked = session[:badges].keys
       @submissions = Submission.where(:badge => @checked)
     end
     if session[:sort] == "name"
