@@ -1,0 +1,13 @@
+color code status (approved => green, pending => yellow, rejected => red)
+add buttons to approve/reject
+host assertion from approved submissions
+link to badge descriptions
+click header to return to main
+sort by ascending and descending
+add email attribute
+send email on reject/approval
+  on reject => ask for further information or give reasons for reject
+  on accept => give claim code or link to push to backpack
+host on nwp
+database for badge info (necessary assertion info)
+change color scheme
