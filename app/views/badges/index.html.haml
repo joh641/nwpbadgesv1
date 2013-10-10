@@ -2,6 +2,5 @@
 
 - @badges.each do |badge|
   %h3= badge.name
-  #image= badge.image
-  #test= badge
+  = image_tag "badges/#{badge.image}"
   %p#description= badge.description
