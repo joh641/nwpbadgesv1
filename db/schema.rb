@@ -23,4 +23,10 @@ ActiveRecord::Schema.define(:version => 20111119180638) do
     t.datetime "updated_at",   :null => false
   end
 
+  create_table "badges", :force => true do |t|
+    t.string "name"
+    t.string "image"
+    t.string "description"
+  end
+
 end

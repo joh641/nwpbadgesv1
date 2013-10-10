@@ -1,7 +1,6 @@
 color code status (approved => green, pending => yellow, rejected => red)
 host assertion from approved submissions
 link to badge descriptions
-click header to return to main
 sort by ascending and descending
 add email attribute
 send email on reject/approval
@@ -10,3 +9,26 @@ send email on reject/approval
 host on nwp
 database for badge info (necessary assertion info)
 change color scheme
+
+badges.nwp.org
+
+banner for header
+badge image
+badge description
+
+path 1
+claim code box
+
+path 2
+questions
+response fields
+submit button
+
+footer
+
+page for making badges
+name
+description
+picture
+
+comment code

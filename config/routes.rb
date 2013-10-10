@@ -18,7 +18,8 @@ Badges::Application.routes.draw do
       get 'reject'
     end
   end
-  root :to => redirect('/submissions')
+  resources :badges
+  root :to => redirect('/badges')
 
   # Sample resource route with options:
   #   resources :products do
