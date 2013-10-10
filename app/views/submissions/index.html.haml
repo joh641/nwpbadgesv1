@@ -23,5 +23,3 @@
         %td= submission.date.strftime("%B %d, %Y")
         %td= submission.status
         %td= link_to "More about #{submission.name}'s submission", submission_path(submission)
-
-= link_to 'Add new submission', new_submission_path

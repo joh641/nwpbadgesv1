@@ -50,17 +50,12 @@ class SubmissionsController < ApplicationController
     end
   end
 
-  def new
-    # default: render 'new' template
-    @all_badges = Submission.all_badges
-  end
-
   def create
     params[:submission][:date] = Time.now
     params[:submission][:status] = "Pending"
     @submission = Submission.create!(params[:submission])
-    flash[:notice] = "#{@submission.name}'s submission was successfully created."
-    redirect_to submissions_path
+    flash[:notice] = "Your submission was successfully created."
+    redirect_to badges_path
   end
 
   def destroy

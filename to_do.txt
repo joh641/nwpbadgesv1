@@ -13,8 +13,6 @@ change color scheme
 badges.nwp.org
 
 banner for header
-badge image
-badge description
 
 path 1
 claim code box

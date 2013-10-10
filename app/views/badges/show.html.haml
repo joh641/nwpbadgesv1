@@ -1,0 +1,17 @@
+%h2 Create a Submission for #{@badge.name}
+
+= image_tag "badges/#{badge.image}"
+
+%h3 Description:
+
+%p#description= @badge.description
+
+= form_tag submissions_path(:badge => #{@badge.name}) do
+
+  = label :submission, :name, 'Name'
+  = text_field :submission, :name
+
+  = label :submission, :description, 'Evidence'
+  = text_area :submission, :description
+
+  = submit_tag 'Submit'

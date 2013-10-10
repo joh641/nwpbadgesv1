@@ -7,6 +7,6 @@
   = submit_tag 'Enter Claim Code', id: "claim_code_submit"
 
 - @badges.each do |badge|
-  %h3= badge.name
+  %h3= link_to "#{badge.name}", badge_path(badge)
   = image_tag "badges/#{badge.image}"
   %p#description= badge.description
