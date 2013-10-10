@@ -15,12 +15,10 @@ badges.nwp.org
 banner for header
 
 path 1
-claim code box
+claim code box code logic
 
 path 2
-questions
-response fields
-submit button
+pass badge name without select
 
 footer
 
