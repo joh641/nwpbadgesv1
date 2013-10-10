@@ -1,5 +1,4 @@
 color code status (approved => green, pending => yellow, rejected => red)
-add buttons to approve/reject
 host assertion from approved submissions
 link to badge descriptions
 click header to return to main
