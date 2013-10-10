@@ -11,8 +11,8 @@
   = label :submission, :name, 'Name'
   = text_field :submission, :name
 
-  - label :submission, :badge, 'Badge'
-  - select :submission, :badge, [@badge.name]
+  = label :submission, :badge, 'Badge'
+  = select :submission, :badge, [@badge.name]
 
   = label :submission, :description, 'Evidence'
   = text_area :submission, :description
