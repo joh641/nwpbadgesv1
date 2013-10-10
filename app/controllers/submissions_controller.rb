@@ -51,7 +51,6 @@ class SubmissionsController < ApplicationController
   end
 
   def create
-    params[:submission][:badge] = params[:badge]
     params[:submission][:date] = Time.now
     params[:submission][:status] = "Pending"
     @submission = Submission.create!(params[:submission])
