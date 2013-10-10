@@ -12,7 +12,12 @@ Badges::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :submissions
+  resources :submissions do
+    member do
+      get 'approve'
+      get 'reject'
+    end
+  end
   root :to => redirect('/submissions')
 
   # Sample resource route with options:

@@ -70,4 +70,16 @@ class SubmissionsController < ApplicationController
     redirect_to submissions_path
   end
 
+  def approve
+    @submission = Submission.find(params[:id])
+    @submission.status = "Approved"
+    @submission.save!
+  end
+  
+  def reject
+    @submission = Submission.find(params[:id])
+    @submission.status = "Rejected"
+    @submission.save!
+  end
+
 end

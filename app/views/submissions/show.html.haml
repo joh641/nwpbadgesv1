@@ -15,7 +15,7 @@
 
 %p#description= @submission.description
 
-= button_to 'Approve', submission_path(@submission), :method => :put, :confirm => 'Are you sure?', :submission[:status] => "Approved"
-= button_to 'Reject', submission_path(@submission), :method => :put, :confirm => 'Are you sure?', :submission[:status] => "Rejected"
+= button_to 'Approve', approve_submission_path, :confirm => 'Are you sure?'
+= button_to 'Reject', reject_submission_path, :confirm => 'Are you sure?'
 = button_to 'Delete', submission_path(@submission), :method => :delete, :confirm => 'Are you sure?'
 = link_to 'Back to submission list', submissions_path
