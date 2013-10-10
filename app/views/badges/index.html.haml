@@ -1,7 +1,7 @@
 %h1 All Badges
 
-= form_tag badges_path, :method => get, id: "claim_form" do
-
+= form_tag badges_path, :method => :get, id: "claim_form" do
+  
   = text_field :claimcode
 
   = submit_tag 'Enter Claim Code', id: "claim_code_submit"
