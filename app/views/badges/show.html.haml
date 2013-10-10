@@ -6,7 +6,7 @@
 
 %p#description= @badge.description
 
-= form_tag submissions_path(:badge => #{@badge.name}) do
+= form_tag submissions_path(:badge => "#{@badge.name}") do
 
   = label :submission, :name, 'Name'
   = text_field :submission, :name
