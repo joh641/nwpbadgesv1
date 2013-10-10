@@ -1,5 +1,11 @@
 %h1 All Badges
 
+= form_tag badges_path, :method => get, id: "claim_form" do
+
+  = text_field :claimcode
+
+  = submit_tag 'Enter Claim Code', id: "claim_code_submit"
+
 - @badges.each do |badge|
   %h3= badge.name
   = image_tag "badges/#{badge.image}"
