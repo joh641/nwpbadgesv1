@@ -17,8 +17,8 @@ Badges::Application.routes.draw do
       get 'approve'
       get 'reject'
     end
-    resources :badges
   end
+  resources :badges
   root :to => redirect('/badges')
 
   # Sample resource route with options:
