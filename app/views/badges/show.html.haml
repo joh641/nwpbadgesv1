@@ -6,13 +6,10 @@
 
 %p#description= @badge.description
 
-= form_tag submissions_path do
+= form_tag submissions_path(:badge => #{@badge.name}) do
 
   = label :submission, :name, 'Name'
   = text_field :submission, :name
-
-  - label :submission, :badge, 'Badge'
-  - select :submission, :badge, #{@badge.name}
 
   = label :submission, :description, 'Evidence'
   = text_area :submission, :description
