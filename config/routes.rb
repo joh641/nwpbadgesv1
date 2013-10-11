@@ -16,10 +16,12 @@ Badges::Application.routes.draw do
     member do
       get 'approve'
       get 'reject'
+      get 'assert'
     end
   end
   resources :badges do
     member do
+      get 'assert'
       get 'submit'
     end
     collection do

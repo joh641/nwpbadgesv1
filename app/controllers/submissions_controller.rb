@@ -83,7 +83,11 @@ class SubmissionsController < ApplicationController
 
   def assert
     @submission = Submission.find(params[:id])
-    @badge = Badge.where(:name => @submission.badge)[0]
+    if (@submission.status == "Approved")
+      @badge = Badge.where(:name => @submission.badge)[0]
+    else
+      @badge = Badge.where(:name => "Hacked")[0]
+    end
   end
 
 end

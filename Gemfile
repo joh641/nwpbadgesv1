@@ -26,6 +26,7 @@ end
 
 gem 'jquery-rails'
 gem 'haml'
+gem 'json_builder'
 
 # Use unicorn as the web server
 # gem 'unicorn'
