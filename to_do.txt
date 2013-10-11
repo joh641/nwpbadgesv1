@@ -1,8 +1,6 @@
 color code status (approved => green, pending => yellow, rejected => red)
 host assertion from approved submissions
-link to badge descriptions
 sort by ascending and descending
-add email attribute
 send email on reject/approval
   on reject => ask for further information or give reasons for reject
   on accept => give claim code or link to push to backpack
@@ -21,10 +19,5 @@ path 2
 pass badge name without select
 
 footer
-
-page for making badges
-name
-description
-picture
 
 comment code

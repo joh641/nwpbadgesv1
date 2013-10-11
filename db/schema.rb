@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20111119180638) do
 
   create_table "submissions", :force => true do |t|
     t.string   "name"
+    t.string   "email"
     t.string   "badge"
     t.string   "status"
     t.text     "description"

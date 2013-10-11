@@ -1,6 +1,10 @@
 class Submission < ActiveRecord::Base
-  attr_accessible :name, :badge, :status, :date, :description
+  attr_accessible :name, :email, :badge, :status, :date, :description
   def self.all_badges
-    ['Test Badge 1', 'Test Badge 2']
+    badges = []
+    Badge.all.each do |badge|
+      badges.push(badge.name)
+    end
+    badges
   end
 end
