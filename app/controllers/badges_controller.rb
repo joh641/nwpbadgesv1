@@ -25,6 +25,7 @@ class BadgesController < ApplicationController
 
   def all
     @badges = Badge.all
+    @badges = @badges.sort_by &:name
   end
 
   def new

@@ -20,3 +20,5 @@ allow images to be uploaded
 comment code
 
 security: claiming, submissions, badges, email/assertion info, hasing
+
+submission editing
