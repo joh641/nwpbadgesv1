@@ -22,3 +22,5 @@ comment code
 security: claiming, submissions, badges, email/assertion info, hasing
 
 submission editing
+
+have badge display as matrix
