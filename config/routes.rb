@@ -18,7 +18,7 @@ Badges::Application.routes.draw do
       get 'reject'
     end
   end
-  resources :badges
+  resources :badges do
     collection do
       get 'all'
     end
