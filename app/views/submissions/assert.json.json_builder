@@ -9,5 +9,5 @@ verify do
   type "hosted"
   url "http://nwpbadges.herokuapp.com/submissions/#{@submission.id}/assert.json"
 end
-issuedOn Time.now.to_i
+issuedOn @submission.date.to_i
 evidence "http://nwpbadges.herokuapp.com/submissions/#{@submission.id}"
