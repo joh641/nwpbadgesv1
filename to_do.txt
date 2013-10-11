@@ -19,4 +19,4 @@ allow images to be uploaded
 
 comment code
 
-security: claiming, submissions, badges
+security: claiming, submissions, badges, email/assertion info, hasing
