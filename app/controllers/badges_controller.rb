@@ -36,4 +36,8 @@ class BadgesController < ApplicationController
     flash[:notice] = "#{@badge.name} was successfully created."
     redirect_to all_badges_path
   end
+
+  def assert
+    @badge = Badge.find(params[:id])
+  end
 end

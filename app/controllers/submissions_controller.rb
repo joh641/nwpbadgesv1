@@ -81,4 +81,9 @@ class SubmissionsController < ApplicationController
     redirect_to submissions_path
   end
 
+  def assert
+    @submission = Submission.find(params[:id])
+    @badge = Badge.where(:name => @submission.badge)[0]
+  end
+
 end
