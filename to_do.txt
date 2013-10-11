@@ -1,21 +1,24 @@
 color code status (approved => green, pending => yellow, rejected => red)
+
 sort by ascending and descending
+
 send email on reject/approval
   on reject => ask for further information or give reasons for reject
   on accept => give claim code or link to push to backpack
-host on nwp
+
+host on nwp (badges.nwp.org)
+
 change color scheme
 
-badges.nwp.org
-
-banner for header
+banner for header, footer
 
 path 1
 claim code box code logic
-
+badge attribute, :claimcode
+  
 path 2
 pass badge name without select
 
-footer
+allow images to be uploaded
 
 comment code
