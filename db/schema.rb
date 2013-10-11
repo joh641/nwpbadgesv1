@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20111119180638) do
     t.string "name"
     t.string "image"
     t.string "description"
+    t.string "claimcode"
   end
 
 end

@@ -93,4 +93,13 @@ class SubmissionsController < ApplicationController
   def push
     @submission = Submission.find(params[:id])
   end
+
+  def claim
+    submission = Submission.create!(params[:submission])
+    submission.date = Time.now
+    submission.status = "Approved"
+    submission.description = "Claim Code"
+    submission.save!
+    redirect_to push_submission_path(submission)
+  end
 end

@@ -12,7 +12,7 @@ submissions.each do |submission|
   Submission.create! (submission)
 end
 
-badges = [{:name => 'Test Badge 1', :image => 'test-badge.png', :description => 'Test Badge 1 can be earned by INSERT DESCRIPTION HERE'}, {:name => 'Hacked', :image => 'test-badge.png', :description => 'Hacked Badge'}]
+badges = [{:name => 'Test Badge 1', :image => 'test-badge.png', :description => 'Test Badge 1 can be earned by INSERT DESCRIPTION HERE', :claimcode => 'Test Claim Code'}, {:name => 'Hacked', :image => 'test-badge.png', :description => 'Hacked Badge', :claimcode => 'Hacked'}]
 
 badges.each do |badge|
   Badge.create! (badge)

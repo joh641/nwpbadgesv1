@@ -11,10 +11,6 @@ host on nwp (badges.nwp.org)
 change color scheme
 
 banner for header, footer
-
-path 1
-claim code box code logic
-badge attribute, :claimcode
   
 path 2
 pass badge name without select
@@ -22,3 +18,5 @@ pass badge name without select
 allow images to be uploaded
 
 comment code
+
+security: claiming, submissions, badges

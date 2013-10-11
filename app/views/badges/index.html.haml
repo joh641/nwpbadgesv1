@@ -2,7 +2,7 @@
 
 = form_tag badges_path, :method => :get, id: "claim_form" do
   
-  = text_field :claim, :code
+  = text_field :claim, :claimcode
 
   = submit_tag 'Enter Claim Code', id: "claim_code_submit"
 

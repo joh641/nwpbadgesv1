@@ -1,4 +1,4 @@
-%h2 Create a Submission for #{@badge.name}
+%h2 Claim #{@badge.name}
 
 = image_tag "badges/#{@badge.image}"
 
@@ -6,8 +6,8 @@
 
 %p#description= @badge.description
 
-= form_tag submissions_path do
-
+= form_tag claim_submission_path do
+  
   = label :submission, :name, 'Name'
   = text_field :submission, :name
   
@@ -17,7 +17,4 @@
   = label :submission, :badge, 'Badge'
   = select :submission, :badge, [@badge.name]
 
-  = label :submission, :description, 'Evidence'
-  = text_area :submission, :description
-
-  = submit_tag 'Submit'
+  = submit_tag 'Claim'

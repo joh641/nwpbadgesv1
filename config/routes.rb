@@ -16,6 +16,7 @@ Badges::Application.routes.draw do
     member do
       get 'approve'
       get 'assert'
+      post 'claim'
       get 'push'
       get 'reject'
     end
@@ -23,6 +24,7 @@ Badges::Application.routes.draw do
   resources :badges do
     member do
       get 'assert'
+      get 'claim'
       get 'submit'
     end
     collection do

@@ -9,6 +9,16 @@ class BadgesController < ApplicationController
   end
 
   def index
+    if params[:claim]
+      code = params[:claim]
+      badge = Badge.where(code)[0]
+      if badge
+        redirect_to claim_badge_path(badge), :method => :get and return
+      else
+        flash[:notice] = "Invalid Claim Code: #{code[:claimcode]}"
+        redirect_to badges_path and return
+      end
+    end        
     @badges = Badge.all
     @badges = @badges.sort_by &:name
   end
@@ -47,4 +57,9 @@ class BadgesController < ApplicationController
   def assert
     @badge = Badge.find(params[:id])
   end
+  
+  def claim
+    @badge = Badge.find(params[:id])
+  end
+
 end
