@@ -2,5 +2,5 @@ name @badge.name
 description @badge.description
 image "http://nwpbadges.herokuapp.com/assets/badges/#{@badge.image}"
 criteria "http://nwpbadges.herokuapp.com/badges/#{@badge.id}"
-issuer "http://nwpbadges.herokuapp.com/assets/json/organization.json"
+issuer "http://nwpbadges.herokuapp.com/assets/organization.json"
 tags @badge.name.split
