@@ -19,6 +19,10 @@ Badges::Application.routes.draw do
     end
   end
   resources :badges
+    collection do
+      get 'all'
+    end
+  end
   root :to => redirect('/badges')
 
   # Sample resource route with options:

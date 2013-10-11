@@ -1,0 +1,16 @@
+%h1 All Badges
+
+%table#badges
+  %thead
+    %tr
+      %th Name
+      %th Image
+      %th More Info
+  %tbody
+    - @badges.each do |badge|
+      %tr
+        %td= badge.name
+        %td= image_tag "badges/#{badge.image}"
+        %td= link_to "More about #{badge.name}", badge_path(badge)
+
+= link_to 'Add new badge', new_badge_path

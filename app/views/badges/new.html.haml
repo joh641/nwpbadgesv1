@@ -1,0 +1,14 @@
+%h2 Create New Badge
+
+= form_tag badges_path, :method => :post do
+
+  = label :badge, :name, 'Name'
+  = text_field :badge, :name
+
+  = label :badge, :image, 'Image'
+  = text_field :badge, :image
+
+  = label :badge, :description, 'Description'
+  = text_area :badge, :description
+
+  = submit_tag 'Create Badge'
