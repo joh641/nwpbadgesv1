@@ -1,0 +1,14 @@
+%h2 Edit Badge
+
+= form_tag badge_path(@badge), :method => :put do
+
+  = label :badge, :name, 'Name'
+  = text_field :badge, :name
+
+  = label :badge, :image, 'Image'
+  = text_field :badge, :image
+
+  = label :badge, :description, 'Description'
+  = text_area :badge, :description
+
+  = submit_tag 'Save Changes'

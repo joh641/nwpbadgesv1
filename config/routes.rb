@@ -19,6 +19,9 @@ Badges::Application.routes.draw do
     end
   end
   resources :badges do
+    member do
+      get 'submit'
+    end
     collection do
       get 'all'
     end

@@ -1,4 +1,4 @@
-%h1 All Badges
+%h1 Badges Display
 
 = form_tag badges_path, :method => :get, id: "claim_form" do
   
@@ -7,8 +7,9 @@
   = submit_tag 'Enter Claim Code', id: "claim_code_submit"
 
 - @badges.each do |badge|
-  %h3= link_to "#{badge.name}", badge_path(badge)
+  %h3= link_to "#{badge.name}", submit_badge_path(badge)
   = image_tag "badges/#{badge.image}"
   %p#description= badge.description
 
+= link_to 'View All Badges', all_badges_path
 = link_to 'View All Submissions', submissions_path
