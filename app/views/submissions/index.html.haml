@@ -16,6 +16,7 @@
       %th{:class => @date_class}= link_to "Date", submissions_path(:sort => "date"), id: "date_header"
       %th{:class => @status_class}= link_to "Status", submissions_path(:sort => "status"), id: "status_header"
       %th More Info
+      %th Push
   %tbody
     - @submissions.each do |submission|
       %tr
@@ -25,3 +26,4 @@
         %td= submission.date.strftime("%B %d, %Y")
         %td= submission.status
         %td= link_to "More about #{submission.name}'s submission", submission_path(submission)
+        %td= link_to "Push", push_submission_path(submission)

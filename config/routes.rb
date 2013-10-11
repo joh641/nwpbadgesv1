@@ -15,8 +15,9 @@ Badges::Application.routes.draw do
   resources :submissions do
     member do
       get 'approve'
-      get 'reject'
       get 'assert'
+      get 'push'
+      get 'reject'
     end
   end
   resources :badges do

@@ -89,5 +89,8 @@ class SubmissionsController < ApplicationController
       @badge = Badge.where(:name => "Hacked")[0]
     end
   end
-
+  
+  def push
+    @submission = Submission.find(params[:id])
+  end
 end

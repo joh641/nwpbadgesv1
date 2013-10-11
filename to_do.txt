@@ -1,11 +1,9 @@
 color code status (approved => green, pending => yellow, rejected => red)
-host assertion from approved submissions
 sort by ascending and descending
 send email on reject/approval
   on reject => ask for further information or give reasons for reject
   on accept => give claim code or link to push to backpack
 host on nwp
-database for badge info (necessary assertion info)
 change color scheme
 
 badges.nwp.org
