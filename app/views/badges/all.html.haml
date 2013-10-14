@@ -8,6 +8,6 @@
       %th Claim Code
       %th More Info
   %tbody
-    render :partial => 'badge', :collection => @badges
+    = render :partial => 'badge', :collection => @badges
 
 = link_to 'Add new badge', new_badge_path
