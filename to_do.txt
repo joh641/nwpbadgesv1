@@ -27,6 +27,8 @@ security: claiming, submissions, badges, email/assertion info, hasing
 	css for failures
   (5.2) user login
   protected #prevent method from being invoked by a route
+  attr_accessible, remove :status, :date from
+  attr_protected
 
 submission editing
 
