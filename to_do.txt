@@ -20,7 +20,7 @@ allow images to be uploaded
 comment code
 
 security: claiming, submissions, badges, email/assertion info, hasing
-  add validations to models, replace create!, save!, update_attributes! with non !, if successful/else (redirect back to submission page, display warning/notice) cases
+  add more validation logic to models, replace create!, save!, update_attributes! with non !, if successful/else (redirect back to submission page, display warning/notice) cases
 
 submission editing
 
