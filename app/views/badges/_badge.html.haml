@@ -1,0 +1,6 @@
+- # A single row of the All Badges table
+%tr
+  %td= badge.name
+  %td= image_tag "badges/#{badge.image}"
+  %td= badge.claimcode
+  %td= link_to "More about #{badge.name}", badge_path(badge)
