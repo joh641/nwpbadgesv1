@@ -20,10 +20,17 @@ allow images to be uploaded
 comment code
 
 security: claiming, submissions, badges, email/assertion info, hasing
-  add more validation logic to models, replace create!, save!, update_attributes! with non !, if successful/else (redirect back to submission page, display warning/notice) cases
+  (5.1) add more validation logic to models
+        replace create!, save!, update_attributes! with non !
+        successful/failure routes, redirect/render with appropriate notices/warnings
+        add filters to controllers
+	css for failures
+  (5.2) user login
+  protected #prevent method from being invoked by a route
 
 submission editing
 
 have badge display as matrix
 
-double check "and return" statements
+double check "and return" statements (controller)
+
