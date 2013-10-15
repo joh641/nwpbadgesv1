@@ -29,6 +29,9 @@ security: claiming, submissions, badges, email/assertion info, hasing
   protected #prevent method from being invoked by a route
   attr_accessible, remove :status, :date from
   attr_protected
+  (5.3) associations
+find_by instead of find
+http methods (put)
 
 submission editing
 
