@@ -39,8 +39,13 @@ have badge display as matrix
 
 double check "and return" statements (controller)
 
-individual claim code box for badges w/ claim codes
 -remove evidence box when click link
 
 page for badge
 - list of people who have earned that badge
+ nested resource submission
+
+more partials
+
+make claimcode box individual to badge so only can use claimcodes for that badge
+remove submission ability from claimcode only badges
