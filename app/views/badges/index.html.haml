@@ -1,7 +1,6 @@
 %h1 Badges Display
 
-- @badges.each do |badge|
-  = render :partial => 'display_badge' 
+= render :partial => 'display_badge', :collection => @badges
 
 #admin
   = link_to 'View All Badges (Admin Only)', all_badges_path
