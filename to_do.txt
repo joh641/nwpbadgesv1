@@ -39,3 +39,8 @@ have badge display as matrix
 
 double check "and return" statements (controller)
 
+individual claim code box for badges w/ claim codes
+-remove evidence box when click link
+
+page for badge
+- list of people who have earned that badge

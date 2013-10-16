@@ -10,10 +10,10 @@
   %h3= link_to "#{badge.name}", submit_badge_path(badge)
   = image_tag "badges/#{badge.image}"
   %p#description= badge.description
--#  - if (badge.claimcode != "")
--#     = form_tag badges_path, :method => :get do
--#       = text_field :claim, :claimcode
--#       = submit_tag 'Enter Claim Code'
+  - if (badge.claimcode != "")
+     = form_tag badges_path, :method => :get do
+       = text_field :claim, :claimcode
+       = submit_tag 'Enter Claim Code'
 
-= link_to 'View All Badges', all_badges_path
-= link_to 'View All Submissions', submissions_path
+= link_to 'View All Badges (Admin Only)', all_badges_path
+= link_to 'View All Submissions (Admin Only)', submissions_path
