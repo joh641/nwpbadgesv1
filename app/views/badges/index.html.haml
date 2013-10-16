@@ -1,6 +1,11 @@
 %h1 Badges Display
 
-= render :partial => 'display_badge', :collection => @badges
+- @badges.each do |badge|
+  %h3= link_to "#{badge.name}", badge_path(badge)
+  = image_tag "badges/#{badge.image}"
+  - if badge.claimcode != ""
+    = render :partial => 'claim_code'
+-#= render :partial => 'display_badge', :collection => @badges
 
 #admin
   = link_to 'View All Badges (Admin Only)', all_badges_path
