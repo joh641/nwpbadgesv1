@@ -9,7 +9,7 @@ class BadgesController < ApplicationController
   end
 
   def index
-    if params[:claim] && params[:badge]
+    if params[:claim]
       code = params[:claim]
       badge = Badge.where(code)[0]
       if badge && badge.claimcode != "" && badge == params[:badge]
