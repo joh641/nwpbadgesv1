@@ -1,50 +1,40 @@
-color code status (approved => green, pending => yellow, rejected => red)
+Code:
+- add associations
+- comment code
+- double check "and return" statements in controllers
+- don't allow submissions for claimcode only badges
+- find_by instead of find
+- http methods (put)
+- make claimcode box only work for badge it is under
+- nest resource submission under badge (has_many, belongs_to)
+- pass badge name without select in submission page
+- use more partials
 
-sort by ascending and descending
-
-send email on reject/approval
-  on reject => ask for further information or give reasons for reject
-  on accept => give claim code or link to push to backpack
-
-host on nwp (badges.nwp.org)
-
-change color scheme
-
-banner for header, footer
-  
-path 2
-pass badge name without select
-
-allow images to be uploaded
-
-comment code
-
-security: claiming, submissions, badges, email/assertion info, hasing
-  (5.1) add more validation logic to models
-        replace create!, save!, update_attributes! with non !
-        successful/failure routes, redirect/render with appropriate notices/warnings
-        add filters to controllers
-	css for failures
-  (5.2) user login
-  protected #prevent method from being invoked by a route
-  attr_accessible, remove :status, :date from
-  attr_protected
-  (5.3) associations
-find_by instead of find
-http methods (put)
-
-submission editing
-
-have badge display as matrix
-
-double check "and return" statements (controller)
-
-page for badge
+Features:
+- allow images to be uploaded for badges
+- color code for status (approved => green, pending => yellow, rejected => red)
 - list of people who have earned that badge
- nested resource submission
+- send email on approve/reject
+	reject => reasons why, link for more evidence
+	approve => link to push to backpack
+- sort by ascending / descending
+- submission editing
 
-more partials
+Layout/Look:
+- CSS, change color scheme
+- CSS for entry failures, highlight invalid attribute
+- have badges display as matrix
+- header/footer
 
-make claimcode box individual to badge so only can use claimcodes for that badge
+Security: 
+- add filters to controllers
+- add validation logic to models
+- attr_accessible (remove :status, :date), attr_protected
+- hash email / user info in assertions
+- protected, prevent method from being invoked by route
+- replace create!, save!, update_attributes! with non !, add conditionals
+- success/failure routes for non-valid/valid entries, redirect/render with appropriate notices/warnings
+- user login page  protected #prevent method from being invoked by a route
 
-don't allow submissions for claimcode only badges
+Miscellaneous:
+- host on nwp.org
