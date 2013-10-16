@@ -6,6 +6,8 @@
 
 %p#description= @badge.description
 
-= button_to 'Edit badge', edit_badge_path(@badge), :method => :get
-= button_to 'Delete', badge_path(@badge), :method => :delete, :confirm => 'Are you sure?'
-= link_to 'Back to badge list', all_badges_path
+= button_to 'Make a Submission', submit_badge_path(@badge)
+= button_to 'Edit badge (Admin Only)', edit_badge_path(@badge), :method => :get
+= button_to 'Delete' (Admin Only), badge_path(@badge), :method => :delete, :confirm => 'Are you sure?'
+= link_to 'Back to badge list (Admin Only)', all_badges_path
+= link_to 'Main Page', badges_path
