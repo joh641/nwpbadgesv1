@@ -6,18 +6,4 @@
 
 %p#description= @badge.description
 
-= form_tag submissions_path do
-
-  = label :submission, :name, 'Name'
-  = text_field :submission, :name
-  
-  = label :submission, :email, 'Email'
-  = text_field :submission, :email
-
-  = label :submission, :badge, 'Badge'
-  = select :submission, :badge, [@badge.name]
-
-  = label :submission, :description, 'Evidence'
-  = text_area :submission, :description
-
-  = submit_tag 'Submit'
+= render :partial => 'submit_form"

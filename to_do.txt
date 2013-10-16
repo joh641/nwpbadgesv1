@@ -1,14 +1,12 @@
 Code:
 - add associations
 - comment code
-- double check "and return" statements in controllers
 - don't allow submissions for claimcode only badges
 - find_by instead of find
 - http methods (put)
 - make claimcode box only work for badge it is under
 - nest resource submission under badge (has_many, belongs_to)
 - pass badge name without select in submission page
-- use more partials
 
 Features:
 - allow images to be uploaded for badges
@@ -34,7 +32,7 @@ Security:
 - protected, prevent method from being invoked by route
 - replace create!, save!, update_attributes! with non !, add conditionals
 - success/failure routes for non-valid/valid entries, redirect/render with appropriate notices/warnings
-- user login page  protected #prevent method from being invoked by a route
+- user login page
 
 Miscellaneous:
 - host on nwp.org
