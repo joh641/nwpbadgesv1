@@ -3,11 +3,8 @@
 - @badges.each do |badge|
   %h3= link_to "#{badge.name}", submit_badge_path(badge)
   = image_tag "badges/#{badge.image}"
-  %p#description= badge.description
   - if (badge.claimcode != "")
-    = form_tag badges_path, :method => :get, class: "claim_form" do
-      = text_field :claim, :claimcode
-      = submit_tag 'Enter Claim Code', class: "claim_code_submit"
+    render :partial => 'claim_code'
 
 = link_to 'View All Badges (Admin Only)', all_badges_path
 = link_to 'View All Submissions (Admin Only)', submissions_path
