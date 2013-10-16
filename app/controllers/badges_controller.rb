@@ -12,7 +12,7 @@ class BadgesController < ApplicationController
     if params[:claim]
       code = params[:claim]
       badge = Badge.where(code)[0]
-      if badge && badge.claimcode != "" && badge.claimcode == params[:badge].claimcode
+      if badge && badge.claimcode != ""
         redirect_to claim_badge_path(badge), :method => :get and return
       else
         flash[:notice] = "Invalid Claim Code: #{code[:claimcode]}"

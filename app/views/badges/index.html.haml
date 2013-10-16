@@ -4,7 +4,6 @@
   %h3= link_to "#{badge.name}", badge_path(badge)
   = image_tag "badges/#{badge.image}"
   - if badge.claimcode != ""
-    - params[:badge] = badge
     = render :partial => 'claim_code'
 
 #admin
