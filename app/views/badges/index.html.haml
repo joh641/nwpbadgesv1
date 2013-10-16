@@ -10,7 +10,7 @@
   %h3= link_to "#{badge.name}", submit_badge_path(badge)
   = image_tag "badges/#{badge.image}"
   %p#description= badge.description
-  = if (badge.claimcode != "")
+  - if (badge.claimcode != "")
     = form_tag badges_path, :method => :get do
       = text_field :claim, :claimcode
       = submit_tag 'Enter Claim Code'
