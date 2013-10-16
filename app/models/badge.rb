@@ -3,5 +3,5 @@ class Badge < ActiveRecord::Base
 #  validates :name, :presence => true
 #  validates :image, :presence => true
 #  validates :description, :presence => true
-  has_many :submissions
+#  has_many :submissions
 end

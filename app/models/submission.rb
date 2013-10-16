@@ -6,7 +6,7 @@ class Submission < ActiveRecord::Base
 #  validates :status, :inclusion => {:in => Submission.all_statuses}
 #  validates :date, :presence => true
 #  validates :description, :presence => true
-  belongs_to :badge
+#  belongs_to :badge
   def self.all_badges
     badges = []
     Badge.all.each do |badge|
