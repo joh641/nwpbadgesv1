@@ -6,6 +6,7 @@ Code:
 - http methods (put)
 - make claimcode box only work for badge it is under
 - nest resource submission under badge (has_many, belongs_to)
+- only show push on approve, only assert if approved
 - pass badge name without select in submission page
 
 Features:
