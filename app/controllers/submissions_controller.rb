@@ -86,7 +86,8 @@ class SubmissionsController < ApplicationController
     if (@submission.status == "Approved")
       @badge = Badge.where(:name => @submission.badge)[0]
     else
-      @badge = Badge.where(:name => "Hacked")[0]
+      flash[:warning] = "This submission has not been approved"
+      redirect_to submissions_path
     end
   end
   

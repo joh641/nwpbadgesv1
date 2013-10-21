@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20111119180638) do
     t.string "image"
     t.string "description"
     t.string "claimcode"
+    t.references "submissions"
   end
 
 end

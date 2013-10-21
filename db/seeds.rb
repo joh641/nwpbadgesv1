@@ -5,14 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-submissions = [{:name => 'Test User', :email => 'test@testemail.test', :badge => 'Test Badge 1', :status => 'Pending', :date => '8-Oct-2013', :description => 'Insert Description Here'}]
-
-submissions.each do |submission|
-  Submission.create! (submission)
-end
-
-badges = [{:name => 'Test Badge 1', :image => 'test-badge.png', :description => 'Test Badge 1 can be earned by INSERT DESCRIPTION HERE', :claimcode => 'Test Claim Code'}, {:name => 'Hacked', :image => 'test-badge.png', :description => 'Hacked Badge', :claimcode => 'Hacked'}]
+badges = [{:name => 'Test Badge 1', :image => 'test-badge.png', :description => 'Test Badge 1'},
+          {:name => 'Advocate Badge', :image => 'advocate-badge.png', :description => 'Advocate Badge', :claimcode => 'advocate'}
+	  {:name => 'Facilitator Badge', :image => 'facilitator-badge.png', :description => 'Facilitator Badge', :claimcode => 'facilitator'}]
 
 badges.each do |badge|
   Badge.create! (badge)
