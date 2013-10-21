@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20111119180638) do
     t.datetime "date"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.references "Badge"
   end
 
   create_table "badges", :force => true do |t|
@@ -29,7 +30,6 @@ ActiveRecord::Schema.define(:version => 20111119180638) do
     t.string "image"
     t.string "description"
     t.string "claimcode"
-    t.references "submissions"
   end
 
 end
