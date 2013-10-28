@@ -9,7 +9,7 @@
 - if @badge.submissions
   = render :partial => 'badge_earners'
 
-- if @badge.claimcode == ""
+- if @badge.claimcode == "" || !@badge.claimcode
   = button_to 'Make a submission', submit_badge_path(@badge), :method => :get
 = button_to 'Edit badge (Admin Only)', edit_badge_path(@badge), :method => :get
 = button_to 'Delete (Admin Only)', badge_path(@badge), :method => :delete, :confirm => 'Are you sure?'
