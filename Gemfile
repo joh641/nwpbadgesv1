@@ -2,13 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.14'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-# for Heroku deployment - as described in Ap. A of ELLS book
+# for Heroku deployment
 group :development, :test do
   gem 'sqlite3'
-  gem 'ruby-debug19'
 end
 
 group :production do
@@ -21,18 +17,13 @@ group :assets do
   gem 'therubyracer'              
   gem 'sass-rails'
   gem 'coffee-rails'
+  gem 'sass', '3.2.10'
   gem 'uglifier'
 end
 
 gem 'jquery-rails'
 gem 'haml'
 gem 'json_builder'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
 
 gem 'devise'
 
