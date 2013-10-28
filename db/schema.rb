@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20111119180638) do
     t.datetime "date"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
-    t.references :badge
+    t.integer "badge_id"
   end
 
   create_table "badges", :force => true do |t|
