@@ -1,12 +1,5 @@
 %h1 All Submissions
 
-= form_tag submissions_path, :method => :get, id: "badges_form" do
-  Include:
-  - @all_badges.each do |badge|
-    = badge
-    = check_box_tag "badges[#{badge}]", 1, @checked.include?(badge)
-  = submit_tag 'Refresh', id: "badges_submit"
-
 %table#submissions
   %thead
     %tr

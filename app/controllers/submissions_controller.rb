@@ -6,11 +6,6 @@ class SubmissionsController < ApplicationController
 
   def index
     @submissions = Submission.all
-    @all_badges = Badge.all_badges
-    @checked = @all_badges
-    if params[:badges]
-      @checked = params[:badges].keys
-      @submissions = Submission.where(:badge => @checked)
     end
   end
 

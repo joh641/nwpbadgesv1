@@ -10,7 +10,7 @@ class BadgesController < ApplicationController
 
   def index
     if params[:claim]
-      code = params[:claim]
+      code = params[:claim][:claimcode]
       badge = Badge.find_by_claimcode(code)
       if badge && badge.claimcode != ""
         redirect_to claim_badge_path(badge), :method => :get and return

@@ -6,7 +6,8 @@
 
 %p#description= @badge.description
 
-= render :partial => 'badge_earners'
+- if @badge.submissions
+  = render :partial => 'badge_earners'
 
 - if @badge.claimcode == ""
   = button_to 'Make a submission', submit_badge_path(@badge), :method => :get
