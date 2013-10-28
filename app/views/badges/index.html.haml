@@ -8,4 +8,6 @@
 -#= render :partial => 'display_badge', :collection => @badges
 
 #admin
-  %br= link_to 'View All Submissions (Admin Only)', submissions_path
+  = link_to 'Add new badge (Admin Only)', new_badge_path
+  = link_to 'View All Submissions (Admin Only)', submissions_path
+  
