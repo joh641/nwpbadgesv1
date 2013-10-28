@@ -34,3 +34,10 @@ gem 'json_builder'
 # Deploy with Capistrano
 # gem 'capistrano'
 
+gem 'devise'
+
+gem 'paperclip'
+gem 'cocaine'
+gem 'aws-s3'
+gem 'aws-sdk'
+gem 'rmagick'

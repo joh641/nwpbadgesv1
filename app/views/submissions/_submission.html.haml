@@ -2,7 +2,7 @@
 %tr
   %td= submission.name
   %td= submission.email 
-  %td= submission.badge
+  %td= submission.badge.name
   %td= submission.date.strftime("%B %d, %Y")
   %td= submission.status
   %td= link_to "More about #{submission.name}'s submission", submission_path(submission)

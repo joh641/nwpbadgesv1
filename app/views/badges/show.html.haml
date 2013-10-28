@@ -12,5 +12,4 @@
   = button_to 'Make a submission', submit_badge_path(@badge), :method => :get
 = button_to 'Edit badge (Admin Only)', edit_badge_path(@badge), :method => :get
 = button_to 'Delete (Admin Only)', badge_path(@badge), :method => :delete, :confirm => 'Are you sure?'
-= link_to 'Back to badge list (Admin Only)', all_badges_path
 %br= link_to 'Back to main page', badges_path
