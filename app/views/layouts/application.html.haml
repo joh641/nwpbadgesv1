@@ -2,13 +2,14 @@
 %html
   %head
     %title NWP Badges Prototype
+    = stylesheet_link_tag 'http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css'
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'http://beta.openbadges.org/issuer.js'
     = csrf_meta_tags
 
   %body
     %h1.title= link_to 'NWP Badges Prototype', badges_path
-    #main
+    .flash
       - if flash[:notice]
         #notice.message= flash[:notice]
       - elsif flash[:warning]

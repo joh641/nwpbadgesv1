@@ -1,7 +1,12 @@
 class Badge < ActiveRecord::Base
   attr_accessible :name, :image, :description, :claimcode
-#  validates :name, :presence => true
-#  validates :image, :presence => true
-#  validates :description, :presence => true
-#  has_many :submissions
+  has_many :submissions
+  
+  def self.all_badges
+    badges = []
+    self.all.each do |badge|
+      badges.push(badge.name)
+    end
+    badges
+  end
 end

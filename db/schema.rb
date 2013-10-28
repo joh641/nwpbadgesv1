@@ -16,12 +16,12 @@ ActiveRecord::Schema.define(:version => 20111119180638) do
   create_table "submissions", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "badge"
     t.string   "status"
     t.text     "description"
     t.datetime "date"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.references "Badge"
   end
 
   create_table "badges", :force => true do |t|

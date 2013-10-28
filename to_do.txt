@@ -8,6 +8,7 @@ Code:
 - nest resource submission under badge (has_many, belongs_to)
 - only show push on approve, only assert if approved
 - pass badge name without select in submission page
+- remove logic from views
 
 Features:
 - allow images to be uploaded for badges
@@ -36,5 +37,4 @@ Security:
 - user login page
 
 Miscellaneous:
-- branch for new features / changes
 - host on nwp.org
