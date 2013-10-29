@@ -1,11 +1,11 @@
-= label :badge, :name, 'Name'
-= text_field :badge, :name
-
-= label :badge, :image, 'Image'
-= text_field :badge, :image
-
-= label :badge, :description, 'Description'
-= text_area :badge, :description
-
-= label :badge, :claimcode, 'Claim Code'
-= text_field :badge, :claimcode
+#name
+  = label :badge, :name, 'Name'
+  = text_field :badge, :name
+#description
+  = label :badge, :description, 'Description'
+  = text_area :badge, :description
+#claimcode
+  = label :badge, :claimcode, 'Claim Code'
+  = text_field :badge, :claimcode
+#image
+  = file_field :badge, :image

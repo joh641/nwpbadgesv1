@@ -16,7 +16,7 @@
 
 %h3 Description:
 
-%p#description= @submission.description
+#description= @submission.description
 
 = button_to 'Approve', approve_submission_path, :method => :get, :confirm => 'Are you sure?'
 = button_to 'Reject', reject_submission_path, :method => :get, :confirm => 'Are you sure?'

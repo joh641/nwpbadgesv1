@@ -1,9 +1,21 @@
 %h2 Claim #{@badge.name}
 
-= image_tag "badges/#{@badge.image}"
+= image_tag @badge.image.url(:medium)
 
 %h3 Description:
 
-%p#description= @badge.description
+#description= @badge.description
 
-= render :partial => 'claim_form'
+= form_tag claim_submission_path do
+  
+  #name
+    = label :submission, :name, 'Name'
+    = text_field :submission, :name  
+  #email
+    = label :submission, :email, 'Email'
+    = text_field :submission, :email
+  #badge 
+    = label :submission, :badge, 'Badge'
+    = select :submission, :badge, [@badge.name]
+
+  = submit_tag 'Claim'

@@ -1,6 +1,7 @@
 class Badge < ActiveRecord::Base
   attr_accessible :name, :image, :description, :claimcode
   has_many :submissions
+  has_attached_file :image, :styles => { :medium => "165x165>", :thumb => "100x100>" }, :default_url => "/badges/:style/test-badge.png"
   
   def self.all_badges
     badges = []

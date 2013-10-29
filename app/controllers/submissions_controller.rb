@@ -46,9 +46,7 @@ class SubmissionsController < ApplicationController
 
   def assert
     @submission = Submission.find_by_id(params[:id])
-    if (@submission.status == "Approved")
-      @badge = Badge.find_by_name(@submission.badge)
-    else
+    if (@submission.status != "Approved")
       flash[:warning] = "This submission has not been approved"
       redirect_to submissions_path
     end
@@ -59,7 +57,10 @@ class SubmissionsController < ApplicationController
   end
 
   def claim
-    submission = Submission.create(params[:submission])
+    submission = Submission.create
+    submission.name = params[:submission][:name]
+    submission.email = params[:submission][:email]
+    submission.badge = Badge.find_by_name(params[:submission][:badge])
     submission.date = Time.now
     submission.status = "Approved"
     submission.description = "Claim Code"
