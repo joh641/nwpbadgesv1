@@ -14,7 +14,6 @@ Features:
 - submission editing
 
 Layout/Look:
-- CSS, change color scheme
 - CSS for entry failures, highlight invalid attribute
 - header/footer
 
