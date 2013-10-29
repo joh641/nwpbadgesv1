@@ -1,16 +1,21 @@
-%h1 All Submissions
-
-%table#submissions
-  %thead
-    %tr
-      %th Name
-      %th Email
-      %th Badge
-      %th Date
-      %th Status
-      %th More Info
-      %th Push
-  %tbody
-    = render :partial => 'submission', :collection => @submissions
-
+#container
+  .header-container.row
+    %h1 All Submissions
+  .content.row
+    .left-column-container.column.col-md-3
+      %h2 Admin
+      %ul
+    .right-column-container.column.container.col-md-8
+      %table#submissions
+        %thead
+          %tr
+            %th Name
+            %th Email
+            %th Badge
+            %th Date
+            %th Status
+            %th More Info
+            %th Push
+          %tbody
+            = render :partial => 'submission', :collection => @submissions
 = link_to 'Back to main page', badges_path
