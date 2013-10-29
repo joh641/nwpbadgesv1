@@ -1,6 +1,7 @@
 %h2 Create New Badge
 
-= form_tag badges_path, :method => :post do
-
+= form_tag badges_path, :multipart => true do
   = render :partial => "badge_form"
   = submit_tag 'Create Badge'
+
+= link_to 'Back to main page', badges_path

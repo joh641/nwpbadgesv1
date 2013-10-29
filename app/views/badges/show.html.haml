@@ -1,10 +1,10 @@
 %h2 Details about #{@badge.name}
 
-= image_tag "badges/#{@badge.image}"
+= image_tag @badge.image.url(:medium)
 
 %h3 Description:
 
-%p#description= @badge.description
+#description= @badge.description
 
 - if @badge.submissions
   = render :partial => 'badge_earners'

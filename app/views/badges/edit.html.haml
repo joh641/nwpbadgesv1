@@ -1,6 +1,7 @@
 %h2 Edit Badge
 
-= form_tag badge_path(@badge), :method => :put do
-
+= form_tag badge_path(@badge), :method => :put, :multipart => true do
   = render :partial => "badge_form"
   = submit_tag "Save Changes"
+
+= link_to 'Back to main page', badges_path

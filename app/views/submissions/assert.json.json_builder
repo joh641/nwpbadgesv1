@@ -1,10 +1,10 @@
-uid @badge.name
+uid @submission.badge.name
 recipient do
   identity @submission.email
   type "email"
   hashed false
 end
-badge "http://nwpbadges.herokuapp.com/badges/#{@badge.id}/assert.json"
+badge "http://nwpbadges.herokuapp.com/badges/#{@submission.badge.id}/assert.json"
 verify do
   type "hosted"
   url "http://nwpbadges.herokuapp.com/submissions/#{@submission.id}/assert.json"
