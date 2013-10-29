@@ -21,5 +21,6 @@
       = image_tag @badge.image.url(:medium)
       %h3 Description:
       #description= @badge.description
+      %h3
       - if @badge.claimcode && @badge.claimcode != ""
         .claimcode= render :partial => 'claim_code'
