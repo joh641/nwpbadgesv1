@@ -9,9 +9,12 @@
 
   %body
     %h1.title= link_to 'NWP Badges Prototype', badges_path
-    .flash
-      - if flash[:notice]
-        #notice.message= flash[:notice]
-      - elsif flash[:warning]
-        #warning.message= flash[:warning]
-      = yield
+    - flash.each do |name, msg|
+      .flash
+        - if not msg.nil?
+          - if msg.is_a?(String)
+            %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+              %a.close{"data-dismiss" => "alert"} x
+              = content_tag :div, msg, :id => "flash_#{name}"
+     
+    = yield
