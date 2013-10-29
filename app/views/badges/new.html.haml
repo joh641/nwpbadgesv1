@@ -7,7 +7,7 @@
       %ul
       %h2 Menu
       %ul
-        %li= link_to ('Back to main page', badges_path)
+        %li= link_to('Back to main page', badges_path)
     .right-column-container.column.container.col-md-8
       = form_tag badges_path, :multipart => true do
         = render :partial => "badge_form"
