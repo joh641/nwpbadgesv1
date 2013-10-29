@@ -11,18 +11,14 @@
         %li= link_to('Push badge to Mozilla Backpack', push_submission_path, :method => :get, :confirm => 'Are you sure?')
         %li= link_to('Back to submission list', submissions_path)
     .right-column-container.column.container.col-md-8 
-      #email
-        Email:
-        = @submission.email
-      #badge
-        Badge:
-        = @submission.badge.name
-      #date
-        Date:
-        = @submission.date.strftime("%B %d, %Y")
-      #status
-        Status:
-        = @submission.status
-      %h3 Description:
+      %h4 Email:
+      #email= @submission.email
+      %h4 Badge:
+      #badge= @submission.badge.name
+      %h4 Date:
+      #date= @submission.date.strftime("%B %d, %Y")
+      %h4 Status:
+      #status= @submission.status
+      %h4 Description:
       #description= @submission.description
 

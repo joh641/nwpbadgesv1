@@ -1,19 +1,12 @@
 Code:
-- add associations
 - comment code
-- don't allow submissions for claimcode only badges
-- find_by instead of find
-- http methods (put)
 - make claimcode box only work for badge it is under
-- nest resource submission under badge (has_many, belongs_to)
 - only show push on approve, only assert if approved
 - pass badge name without select in submission page
 - remove logic from views
 
 Features:
-- allow images to be uploaded for badges
 - color code for status (approved => green, pending => yellow, rejected => red)
-- list of people who have earned that badge
 - send email on approve/reject
 	reject => reasons why, link for more evidence
 	approve => link to push to backpack
@@ -23,7 +16,6 @@ Features:
 Layout/Look:
 - CSS, change color scheme
 - CSS for entry failures, highlight invalid attribute
-- have badges display as matrix
 - header/footer
 
 Security: 
