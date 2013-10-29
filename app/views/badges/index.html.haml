@@ -7,6 +7,9 @@
       %ul
         %li= link_to('Add new badge', new_badge_path)
         %li= link_to('View all submissions', submissions_path)
+      %h2 Menu
+      %ul
+        
     .right-column-container.column.container.col-md-8
       - @badges.each do |badge|
         .col-md-3
