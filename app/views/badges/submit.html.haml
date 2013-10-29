@@ -8,7 +8,7 @@
         
       %h2 Menu
       %ul
-        %li= link_to 'Back to badge page', badge_path(@badge), :method => :get
+        %li= link_to ('Back to badge page', badge_path(@badge), :method => :get)
     .right-column-container.column.col-md-8
       = image_tag @badge.image.url(:medium)
       %h3 Description:

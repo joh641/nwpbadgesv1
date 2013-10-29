@@ -1,21 +1,26 @@
-%h2 Claim #{@badge.name}
+#container
+  .header-container.row
+    %h1 Claim #{@badge.name}
+  .content.row
+    .left-column-container.column.col-md-3
+      %h2 Admin
+      %ul
 
-= image_tag @badge.image.url(:medium)
-
-%h3 Description:
-
-#description= @badge.description
-
-= form_tag claim_submission_path do
-  
-  #name
-    = label :submission, :name, 'Name'
-    = text_field :submission, :name  
-  #email
-    = label :submission, :email, 'Email'
-    = text_field :submission, :email
-  #badge 
-    = label :submission, :badge, 'Badge'
-    = select :submission, :badge, [@badge.name]
-
-  = submit_tag 'Claim'
+      %h2 Menu
+      %ul
+        %li= link_to ('Back to main page', badges_path)
+    .right-column-container.column.container.col-md-8
+      = image_tag @badge.image.url(:medium)
+      %h3 Description:
+      #description= @badge.description
+      = form_tag claim_submission_path do
+        #name
+          = label :submission, :name, 'Name'
+          = text_field :submission, :name  
+        #email
+          = label :submission, :email, 'Email'
+          = text_field :submission, :email
+        #badge 
+          = label :submission, :badge, 'Badge'
+          = select :submission, :badge, [@badge.name]
+        = submit_tag 'Claim'
