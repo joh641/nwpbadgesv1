@@ -1,16 +1,25 @@
-%h2 Details about #{@badge.name}
-
-= image_tag @badge.image.url(:medium)
-
-%h3 Description:
-
-#description= @badge.description
-
-- if @badge.submissions
-  = render :partial => 'badge_earners'
-
-- if @badge.claimcode == "" || !@badge.claimcode
-  = button_to 'Make a submission', submit_badge_path(@badge), :method => :get
-= button_to 'Edit badge (Admin Only)', edit_badge_path(@badge), :method => :get
-= button_to 'Delete (Admin Only)', badge_path(@badge), :method => :delete, :confirm => 'Are you sure?'
-= link_to 'Back to main page', badges_path
+#container
+  .header-container.row
+    %h1 Details about #{@badge.name}
+  .content.row
+    .left-column-container.column.col-md-3
+      %h2 Admin
+      %ul
+        %li= link_to 'Edit badge', edit_badge_path(@badge), :method => :get
+        %li= link_to 'Delete badge', badge_path(@badge), :method => :delete, :confirm => 'Are you sure?'
+      %h2 Menu
+      %ul
+        - if @badge.claimcode == "" || !@badge.claimcode
+          %li= link_to 'Make a submission', submit_badge_path(@badge), :method => :get
+        %li= link_to 'Back to main page', badges_path
+      %h3 Badge Earners
+      %ul
+        - @badge.submissions.each do |submission|
+          - if submission.status == 'Approved'
+            %li= submission.name
+    .right-column-container.column.container.col-md-8
+      = image_tag @badge.image.url(:medium)
+      %h3 Description:
+      #description= @badge.description
+      - if @badge.claimcode && @badge.claimcode != ""
+        .claimcode= render :partial => 'claim_code'

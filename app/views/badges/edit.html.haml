@@ -1,7 +1,14 @@
-%h2 Edit Badge
-
-= form_tag badge_path(@badge), :method => :put, :multipart => true do
-  = render :partial => "badge_form"
-  = submit_tag "Save Changes"
-
-= link_to 'Back to main page', badges_path
+#container
+  .header-container.row
+    %h1 Edit Badge
+  .content.row
+    .left-column-container.column.col-md-3
+      %h2 Admin
+        %ul
+      %h2 Menu
+        %ul
+          %li= link_to 'Back to main page', badges_path
+    .right-column-container.column.container.col-md-8
+      = form_tag badge_path(@badge), :method => :put, :multipart => true do
+        = render :partial => "badge_form"
+        = submit_tag 'Save Changes'
