@@ -13,7 +13,7 @@
       .flash
         - if not msg.nil?
           - if msg.is_a?(String)
-            %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+            %div{:class => "alert alert-#{name == :notice ? "success" : "warning"}"}
               %a.close{"data-dismiss" => "alert"} x
               = content_tag :div, msg, :id => "flash_#{name}"
      
