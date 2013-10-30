@@ -16,6 +16,7 @@ Features:
 Layout/Look:
 - CSS for entry failures, highlight invalid attribute
 - header/footer
+- allow flash messages to be closed
 
 Security: 
 - add filters to controllers
