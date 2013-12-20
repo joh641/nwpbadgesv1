@@ -39,8 +39,8 @@ Models
   
 Controllers
 
-  badges_controller.rb, controls badge actions, such as create, edit, assert
-  submissions_controller.rb, controls submission actions, such as create, assert, push
+  badges_controller.rb, controls badge actions such as create, edit, assert
+  submissions_controller.rb, controls submission actions such as create, assert, push
   
 Views
 
@@ -50,4 +50,5 @@ Views
 == For More Information
 
 Mozilla Open Badges - http://www.openbadges.org/
+
 National Writing Project - http://www.nwp.org/
