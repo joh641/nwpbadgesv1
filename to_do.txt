@@ -16,6 +16,7 @@ Features:
 
 Layout/Look:
 - allow flash messages to be closed
+- badge earners displayed underneath badges more prominently, similar to P2PU
 - CSS for entry failures, highlight invalid attribute
 - drop down menu for actions
 - header/footer
