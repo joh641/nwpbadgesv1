@@ -49,6 +49,6 @@ Views
 
 == For More Information
 
-Mozilla Open Badges - http://www.openbadges.org/
+Mozilla Open Badges - http://www.openbadges.org
 
-National Writing Project - http://www.nwp.org/
+National Writing Project - http://www.nwp.org
