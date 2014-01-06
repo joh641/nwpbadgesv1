@@ -7,8 +7,7 @@
     = label :submission, :email, 'Email'
     = text_field :submission, :email
   #badge
-    = label :submission, :badge, 'Badge'
-    = select :submission, :badge, [@badge.name]
+    = hidden_field_tag :badge, @badge.name
   #description
     = label :submission, :description, 'Evidence'
     = text_area :submission, :description

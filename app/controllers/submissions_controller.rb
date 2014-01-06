@@ -13,7 +13,7 @@ class SubmissionsController < ApplicationController
     @submission.name = params[:submission][:name]
     @submission.email = params[:submission][:email]
     @submission.description = params[:submission][:description]
-    @submission.badge = Badge.find_by_name(params[:submission][:badge])
+    @submission.badge = Badge.find_by_name(params[:badge])
     @submission.date = Time.now
     @submission.status = "Pending"
     @submission.save
@@ -60,7 +60,7 @@ class SubmissionsController < ApplicationController
     submission = Submission.create
     submission.name = params[:submission][:name]
     submission.email = params[:submission][:email]
-    submission.badge = Badge.find_by_name(params[:submission][:badge])
+    submission.badge = Badge.find_by_name(params[:badge])
     submission.date = Time.now
     submission.status = "Approved"
     submission.description = "Claim Code"

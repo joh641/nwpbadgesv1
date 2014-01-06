@@ -1,9 +1,6 @@
 Code:
 - comment code
-- make claimcode box only work for badge it is under
 - only show push on approve, only assert if approved
-- pass badge name without select in submission page
-- remove logic from views
 
 Features:
 - color code for status (approved => green, pending => yellow, rejected => red)

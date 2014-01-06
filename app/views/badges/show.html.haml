@@ -23,4 +23,4 @@
       #description= @badge.description
       %h3
       - if @badge.claimcode && @badge.claimcode != ""
-        .claimcode= render :partial => 'claim_code'
+        .claimcode= render :partial => 'claim_code', :locals => {:badge => @badge}

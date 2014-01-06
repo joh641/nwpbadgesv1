@@ -11,12 +11,12 @@ class BadgesController < ApplicationController
   def index
     if params[:claim]
       code = params[:claim][:claimcode]
-      badge = Badge.find_by_claimcode(code)
-      if badge && badge.claimcode != ""
+      badge = Badge.find_by_name(params[:badge])
+      if badge && badge.claimcode == code
         redirect_to claim_badge_path(badge), :method => :get and return
       else
         flash[:warning] = "Invalid Claim Code: #{code}"
-        redirect_to badges_path and return
+        redirect_to :back and return
       end
     end        
     @badges = Badge.all
