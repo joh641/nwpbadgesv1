@@ -39,6 +39,9 @@ GEM
       nokogiri (>= 1.4.4, < 1.6.0)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.1.2)
+    best_in_place (2.1.0)
+      jquery-rails
+      rails (~> 3.1)
     builder (3.0.4)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -149,6 +152,7 @@ PLATFORMS
 DEPENDENCIES
   aws-s3
   aws-sdk
+  best_in_place
   cocaine
   coffee-rails
   devise
