@@ -1,7 +1,3 @@
-Code:
-- comment code
-- only show push on approve, only assert if approved
-
 Features:
 - color code for status (approved => green, pending => yellow, rejected => red)
 - send email on approve/reject
