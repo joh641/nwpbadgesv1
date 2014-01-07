@@ -23,6 +23,9 @@ end
 
 gem 'jquery-rails'
 gem 'haml'
+gem 'haml-rails'
+gem 'bootstrap-sass-rails'
+gem 'font-awesome-sass'
 gem 'json_builder'
 
 gem 'devise'

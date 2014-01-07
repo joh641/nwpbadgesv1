@@ -33,7 +33,7 @@ Badges::Application.routes.draw do
       get 'all'
     end
   end
-  root :to => redirect('/badges')
+  root :to => 'badges#index'
 
   # Sample resource route with options:
   #   resources :products do
